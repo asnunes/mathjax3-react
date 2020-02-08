@@ -9,6 +9,10 @@
     "eject": "react-scripts eject",
     "publish:npm": "rm -rf dist && mkdir dist &&  babel src/lib -d dist --copy-files"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asnunes/mathjax3-react"
+  },
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
