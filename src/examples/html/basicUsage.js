@@ -1,7 +1,7 @@
 import React from "react";
 import MathJax from "../../lib";
 
-function App() {
+function basicUsage() {
   return (
     <div className="App">
       <MathJax.Provider>
@@ -38,4 +38,4 @@ const html = `
 </p>
 `;
 
-export default App;
+export default basicUsage;
