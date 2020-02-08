@@ -5,7 +5,7 @@ function basicUsage() {
   return (
     <div className="App">
       <MathJax.Provider>
-        <MathJax.Formula formula="$$x + 2$$" />
+        <MathJax.Formula formula="$$\int x^2dx$$" />
       </MathJax.Provider>
     </div>
   );

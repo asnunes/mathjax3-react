@@ -62,9 +62,9 @@ const html = `
 `;
 ````
 
-Result
+Result:
 
-
+![basic html example](./docs/images/html-basic.png)
 
 ### TeX or AsciiMath formula
 
@@ -76,7 +76,7 @@ function basicUsage() {
   return (
     <div className="App">
       <MathJax.Provider>
-        <MathJax.Formula formula="$$x + 2$$" />
+        <MathJax.Formula formula="$$\int x^2dx$$" />
       </MathJax.Provider>
     </div>
   );
@@ -86,7 +86,9 @@ export default basicUsage;
 
 ````
 
-Result
+Result:
+
+![basic formula example](./docs/images/formula-basic.png)
 
 ### Custom options
 
@@ -107,7 +109,7 @@ function customOptions() {
           }
         }}
       >
-        <MathJax.Formula formula="test: $x + 2$"/>
+        <MathJax.Formula formula="Euler's identity: $e^{i\pi} = -1$"/>
       </MathJax.Provider>
     </div>
   );
@@ -116,6 +118,11 @@ function customOptions() {
 export default customOptions;
 
 ````
+
+Result:
+
+![custom formula example](./docs/images/formula-custom.png)
+
 
 **Which options are available?**
 

@@ -12,7 +12,7 @@ function customOptions() {
           }
         }}
       >
-        <MathJax.Formula formula="test: $x + 2$"/>
+        <MathJax.Formula formula="Euler's identity: $e^{i\pi} = -1$"/>
       </MathJax.Provider>
     </div>
   );
