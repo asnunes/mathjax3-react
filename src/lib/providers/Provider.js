@@ -38,7 +38,7 @@ const Provider = props => {
 };
 
 const DEFAULT_OPTIONS = {};
-const DEFAULT_URL = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-svg.js";
+const DEFAULT_URL = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
 
 export const useMathJaxContext = () => useContext(MathJaxContext);
 
