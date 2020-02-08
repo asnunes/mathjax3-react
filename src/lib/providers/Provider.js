@@ -1,4 +1,4 @@
-import load from 'load-script';
+import load from "load-script";
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 const MathJaxContext = createContext(null);
@@ -10,13 +10,14 @@ const Provider = props => {
   const [MathJax, setMathJax] = useState(options);
   const [isMathJaxLoaded, setIsMathJaxLoaded] = useState(false);
 
-  useEffect(
-    () => {
-      load(url, (err, script) => {
-        if (err) return onErr(err);
-        return onLoad(script);
-      })
-    }, []);
+  window.MathJax = MathJax;
+
+  useEffect(() => {
+    load(url, (err, script) => {
+      if (err) return onErr(err);
+      return onLoad(script);
+    });
+  }, []);
 
   function onLoad(script) {
     console.log(script);
@@ -28,8 +29,13 @@ const Provider = props => {
     console.log(err);
   }
 
-  return <MathJaxContext.Provider value={isMathJaxLoaded ? MathJax : null} {...props} />;
-}
+  return (
+    <MathJaxContext.Provider
+      value={isMathJaxLoaded ? MathJax : null}
+      {...props}
+    />
+  );
+};
 
 const DEFAULT_OPTIONS = {};
 const DEFAULT_URL = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-svg.js";
