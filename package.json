@@ -1,6 +1,6 @@
 {
   "name": "mathjax3-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "scripts": {
     "start": "react-scripts start",
