@@ -1,4 +1,4 @@
-import Node from './Node';
+import Formula from './Formula';
 import Html from './Html';
 
-export { Node, Html };
+export { Formula, Html };

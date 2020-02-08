@@ -1,9 +1,9 @@
 import { Provider } from './providers';
-import { Node, Html } from './components';
+import { Formula, Html } from './components';
 
 const MathJax = {
   Provider,
-  Node,
+  Formula,
   Html,
 }
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useMathJaxContext } from '../providers/Provider';
+import { useMathJaxContext } from "../providers/Provider";
 
 export default function Formula({ formula }) {
   const MathJax = useMathJaxContext();
@@ -10,7 +10,5 @@ export default function Formula({ formula }) {
 
   if (!MathJax) return null;
 
-  return (
-    <div formula={formula} ></div>
-  );
+  return <div>{formula}</div>;
 }
