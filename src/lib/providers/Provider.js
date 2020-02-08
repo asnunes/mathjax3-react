@@ -17,7 +17,7 @@ const Provider = props => {
       if (err) return onErr(err);
       return onLoad(script);
     });
-  }, []);
+  }, [url]);
 
   function onLoad(script) {
     console.log(script);

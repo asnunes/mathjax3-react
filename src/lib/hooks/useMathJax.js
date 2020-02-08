@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useMathJaxContext } from '../providers/Provider';
 
 export const useMathJax = () => {
