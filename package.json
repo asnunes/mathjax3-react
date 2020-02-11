@@ -10,6 +10,7 @@
     "eject": "react-scripts eject",
     "publish:npm": "rm -rf dist && mkdir dist &&  babel src/lib -d dist --copy-files"
   },
+  "keywords": ["mathjax", "math", "mathjax3", "react", "equation", "latex", "tex", "asciimath", "mathml"],
   "repository": {
     "type": "git",
     "url": "https://github.com/asnunes/mathjax3-react"
