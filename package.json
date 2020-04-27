@@ -1,6 +1,6 @@
 {
   "name": "mathjax3-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "main": "dist/index.js",
   "scripts": {
@@ -10,6 +10,17 @@
     "eject": "react-scripts eject",
     "publish:npm": "rm -rf dist && mkdir dist &&  babel src/lib -d dist --copy-files"
   },
+  "keywords": [
+    "mathjax",
+    "math",
+    "mathjax3",
+    "react",
+    "equation",
+    "latex",
+    "tex",
+    "asciimath",
+    "mathml"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/asnunes/mathjax3-react"
