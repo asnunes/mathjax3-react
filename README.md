@@ -136,5 +136,5 @@ Options props are exactly the same options used in MathJax lib. So you can use [
 
 **Why did you do it?**
 
-It's because load MathJax can be heavy. So, you can can place ``MathJax.Provider`` in an more higher context and then place ``MathJax.Html`` and ``MathJax.Formula`` in a context that will be updated more often.
+It's because load MathJax can be heavy. So, you can can place ``MathJax.Provider`` in a higher context and then place ``MathJax.Html`` and ``MathJax.Formula`` in a context that will be updated more often.
 
