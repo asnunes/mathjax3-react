@@ -150,7 +150,7 @@ export default CustomInput;
 
 ````
 
-Result is available on live example.
+Result is available on [**live example**](https://asnunes.github.io/mathjax3-react/)
 
 
 
