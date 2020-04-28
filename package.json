@@ -28,11 +28,13 @@
     "type": "git",
     "url": "https://github.com/asnunes/mathjax3-react"
   },
-  "dependencies": {
-    "react-scripts": "3.4.0",
-    "simple-load-script": "^1.0.2",
+  "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
+  },
+  "dependencies": {
+    "react-scripts": "3.4.0",
+    "simple-load-script": "^1.0.2"
   },
   "eslintConfig": {
     "extends": "react-app"
