@@ -8,11 +8,11 @@ function customOptions() {
         url="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
         options={{
           tex: {
-            inlineMath: [['$', '$']]
-          }
+            inlineMath: [["$", "$"]],
+          },
         }}
       >
-        <MathJax.Formula formula="Euler's identity: $e^{i\pi} = -1$"/>
+        <MathJax.Formula formula="Euler's identity: $e^{i\pi} = -1$" />
       </MathJax.Provider>
     </div>
   );

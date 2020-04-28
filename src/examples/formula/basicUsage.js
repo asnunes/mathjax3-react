@@ -1,7 +1,7 @@
 import React from "react";
 import MathJax from "../../lib";
 
-function basicUsage() {
+function BasicUsage() {
   return (
     <div className="App">
       <MathJax.Provider>
@@ -11,4 +11,4 @@ function basicUsage() {
   );
 }
 
-export default basicUsage;
+export default BasicUsage;
