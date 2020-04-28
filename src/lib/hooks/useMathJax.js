@@ -6,7 +6,7 @@ export const useMathJax = () => {
 
   useEffect(() => {
     updateMathContent();
-  }, [MathJax]);
+  });
 
   function updateMathContent() {
     MathJax && MathJax.typeset();
