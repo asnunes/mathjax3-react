@@ -19,8 +19,7 @@ const Provider = props => {
     });
   }, [url]);
 
-  function onLoad(script) {
-    console.log(script);
+  function onLoad() {
     setMathJax(window.MathJax);
     setIsMathJaxLoaded(true);
   }
