@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import { useMathJaxContext } from "../providers/Provider";
+import { useMathJax } from "../hooks";
 
 export default function Formula({ formula }) {
-  const MathJax = useMathJaxContext();
+  const [MathJax, updateMathContent] = useMathJax();
 
   useEffect(() => {
-    MathJax && MathJax.typeset();
-  }, [MathJax]);
+    updateMathContent();
+  });
 
   if (!MathJax) return null;
 

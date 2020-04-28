@@ -123,10 +123,34 @@ Result:
 
 ![custom formula example](./docs/images/formula-custom.png)
 
-
 **Which options are available?**
 
 Options props are exactly the same options used in MathJax lib. So you can use [official MathJax documentation](https://docs.mathjax.org/en/latest/web/configuration.html) to set custom options.
+
+### Custom Input
+````javascript
+import React, { useState } from "react";
+import MathJax from "mathjax3-react";
+
+function CustomInput() {
+  const [value, setValue] = useState("\\int_{-\\infty}^{+\\infty} e^{-x^2} dx = \\sqrt{\\pi}");
+
+  return (
+    <div className="App">
+      <h1>Custom Math Input</h1>
+      <input type="text" value={value} onChange={(e) => setValue(e.target.value)} style={{width: '100%'}}/>
+      <MathJax.Provider>
+        <MathJax.Formula formula={"$$" + value + "$$"} />
+      </MathJax.Provider>
+    </div>
+  );
+}
+
+export default CustomInput;
+
+````
+
+Result is available on live example.
 
 
 

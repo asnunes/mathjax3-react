@@ -1,12 +1,16 @@
-import { useEffect } from 'react';
-import { useMathJaxContext } from '../providers/Provider';
+import { useEffect } from "react";
+import { useMathJaxContext } from "../providers/Provider";
 
 export const useMathJax = () => {
   const MathJax = useMathJaxContext();
 
   useEffect(() => {
-    MathJax && MathJax.typeset();
-  }, [MathJax]);
+    updateMathContent();
+  });
 
-  return MathJax;
+  function updateMathContent() {
+    MathJax && MathJax.typeset();
+  }
+
+  return [MathJax, updateMathContent];
 };
