@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4d30ced94c424745601b30891817848f",
+    "revision": "1c8357682571577d26c4555c9267b8fc",
     "url": "/mathjax3-react/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mathjax3-react/static/js/2.685ee15c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4d3c5f8e3f653e88e304",
-    "url": "/mathjax3-react/static/js/main.e96dc9b1.chunk.js"
+    "revision": "2f0b7d9de8c7ba8ce984",
+    "url": "/mathjax3-react/static/js/main.c39b7d85.chunk.js"
   },
   {
     "revision": "71badfb4869fd5d01631",
