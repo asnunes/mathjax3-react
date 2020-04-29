@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/mathjax3-react/static/js/main.c39b7d85.chunk.js",
-    "main.js.map": "/mathjax3-react/static/js/main.c39b7d85.chunk.js.map",
+    "main.js": "/mathjax3-react/static/js/main.95567b33.chunk.js",
+    "main.js.map": "/mathjax3-react/static/js/main.95567b33.chunk.js.map",
     "runtime-main.js": "/mathjax3-react/static/js/runtime-main.2f1081e8.js",
     "runtime-main.js.map": "/mathjax3-react/static/js/runtime-main.2f1081e8.js.map",
     "static/js/2.685ee15c.chunk.js": "/mathjax3-react/static/js/2.685ee15c.chunk.js",
     "static/js/2.685ee15c.chunk.js.map": "/mathjax3-react/static/js/2.685ee15c.chunk.js.map",
     "index.html": "/mathjax3-react/index.html",
-    "precache-manifest.3159d7a47e95ae773dc5325996cf2590.js": "/mathjax3-react/precache-manifest.3159d7a47e95ae773dc5325996cf2590.js",
+    "precache-manifest.dcc787378851eef3ea10db15ff0d0344.js": "/mathjax3-react/precache-manifest.dcc787378851eef3ea10db15ff0d0344.js",
     "service-worker.js": "/mathjax3-react/service-worker.js",
     "static/js/2.685ee15c.chunk.js.LICENSE.txt": "/mathjax3-react/static/js/2.685ee15c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2f1081e8.js",
     "static/js/2.685ee15c.chunk.js",
-    "static/js/main.c39b7d85.chunk.js"
+    "static/js/main.95567b33.chunk.js"
   ]
 }
