@@ -9,7 +9,14 @@ export const useMathJax = () => {
   });
 
   function updateMathContent() {
-    MathJax && MathJax.typeset();
+    MathJax &&
+      MathJax.typesetPromise().catch((e) => {
+        if (!isTypeError(e)) console.log(e);
+      });
+  }
+
+  function isTypeError(e) {
+    return e instanceof TypeError; // MathJax unhandled type error bug
   }
 
   return [MathJax, updateMathContent];
