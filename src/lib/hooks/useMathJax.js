@@ -9,6 +9,8 @@ export const useMathJax = () => {
   });
 
   function updateMathContent() {
+    if (!MathJax || typeof(MathJax.typesetPromise) !== 'function') return;
+
     MathJax &&
       MathJax.typesetPromise().catch((e) => {
         if (!isTypeError(e)) console.log(e);
