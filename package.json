@@ -1,6 +1,6 @@
 {
   "name": "mathjax3-react",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": false,
   "main": "dist/index.js",
   "homepage": "http://asnunes.github.io/mathjax3-react",
@@ -9,7 +9,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/lib -d dist --copy-files",
+    "publish:npm": "rm -rf dist && mkdir dist && babel src/lib -d dist --copy-files",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -33,7 +33,6 @@
     "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "react-scripts": "3.4.0",
     "simple-load-script": "^1.0.2"
   },
   "eslintConfig": {
@@ -54,7 +53,8 @@
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "^3.1.0",
+    "react-scripts": "^4.0.0",
     "install-peers": "^1.0.3"
   },
   "babel": {
