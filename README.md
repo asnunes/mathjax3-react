@@ -1,6 +1,8 @@
 # MathJax3 - React 
 
-React component to  easily load MathJax **v3** and process **dynamically** raw ASCIImath and TeX formulas or HTML content.
+React component to easily load MathJax **v3** and process **dynamically** raw ASCIIMath, TeX or MathML content.
+
+[**LIVE EXAMPLE**](https://asnunes.github.io/mathjax3-react/)
 
 ## Installation
 
@@ -150,7 +152,7 @@ export default CustomInput;
 
 ````
 
-Result is available on [**live example**](https://asnunes.github.io/mathjax3-react/)
+Result is available on [**live example**](https://asnunes.github.io/mathjax3-react/).
 
 
 
