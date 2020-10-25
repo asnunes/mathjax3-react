@@ -24,6 +24,11 @@
     "asciimath",
     "mathml"
   ],
+  "author": "Alexandre Nunes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asnunes/notion-page-to-html/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/asnunes/mathjax3-react"
