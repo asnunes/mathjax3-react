@@ -1,0 +1,27 @@
+name: Publish
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+jobs:
+  publish:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - name: Dependencies installation
+        run: npm install
+      - name: Pre Publish
+        run: npm run publish:npm
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public
+      - name: Pre Deploy
+        run: npm run predeploy
+      - name: Deploy
+        run: npm run deploy

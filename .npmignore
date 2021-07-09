@@ -14,9 +14,7 @@
 # source
 /docs
 /public
-/src/examples
-/src/serviceWorker.js
-/src/setupTests.js
+/src
 README.md
 
 # misc
