@@ -1,12 +1,7 @@
-import { useEffect } from "react";
 import { useMathJaxContext } from "../providers/Provider";
 
 export const useMathJax = () => {
   const MathJax = useMathJaxContext();
-
-  useEffect(() => {
-    updateMathContent();
-  });
 
   function updateMathContent(onFinish = () => {}) {
     if (!MathJax || typeof MathJax.typesetPromise !== "function") return;
