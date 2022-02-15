@@ -1,6 +1,6 @@
 {
   "name": "mathjax3-react",
-  "version": "1.0.12",
+  "version": "1.1.0",
   "private": false,
   "main": "dist/index.js",
   "homepage": "http://asnunes.github.io/mathjax3-react",
@@ -11,7 +11,8 @@
     "eject": "react-scripts eject",
     "publish:npm": "rm -rf dist && mkdir dist && babel src/lib -d dist --copy-files",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "prepare": "npm run publish:npm"
   },
   "keywords": [
     "mathjax",

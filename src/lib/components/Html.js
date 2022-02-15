@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useMathJax } from "../hooks";
 
-export default function Html({ html }) {
+export default function Html({ html, onFinishRender }) {
   const [MathJax, updateMathContent] = useMathJax();
 
   useEffect(() => {
-    updateMathContent();
-  });
+    if (MathJax) updateMathContent(onFinishRender);
+  }, [MathJax, updateMathContent, onFinishRender]);
 
   if (!MathJax) return null;
 
