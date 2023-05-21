@@ -35,8 +35,8 @@
     "url": "https://github.com/asnunes/mathjax3-react"
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^17.0.2 || ^18.2.0",
+    "react-dom": "^17.0.2 || ^18.2.0"
   },
   "dependencies": {
     "simple-load-script": "^1.0.3"
