@@ -1,6 +1,6 @@
 {
   "name": "mathjax3-react",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": false,
   "main": "dist/index.js",
   "homepage": "http://asnunes.github.io/mathjax3-react",
@@ -44,34 +44,11 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
-    "@babel/cli": "^7.14.5",
-    "@babel/preset-react": "^7.14.5",
-    "react-scripts": "^4.0.3"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ],
-      "@babel/preset-react"
-    ]
+    "@vitejs/plugin-react": "^4.2.0",
+    "react-scripts": "^4.0.3",
+    "vite": "^5.0.2",
+    "vite-plugin-dts": "^3.6.3",
+    "vite-tsconfig-paths": "^4.2.1"
   }
 }
