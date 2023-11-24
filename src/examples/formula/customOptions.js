@@ -1,7 +1,7 @@
 import React from 'react';
 import MathJax from '../../lib';
 
-function customOptions() {
+function CustomOptions() {
   return (
     <div className="App">
       <MathJax.Provider
@@ -18,4 +18,4 @@ function customOptions() {
   );
 }
 
-export default customOptions;
+export default CustomOptions;

@@ -5,7 +5,7 @@ function BasicUsage() {
   return (
     <div className="App">
       <MathJax.Provider>
-        <MathJax.Formula formula="$$\int x^2dx$$" />
+        <MathJax.Formula formula="$$\int x^2dx = \frac{1}{3}x^3 + C$$" />
       </MathJax.Provider>
     </div>
   );
