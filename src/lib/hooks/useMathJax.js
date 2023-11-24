@@ -1,10 +1,10 @@
-import { useMathJaxContext } from "../providers/Provider";
+import { useMathJaxContext } from '../providers/Provider';
 
 export const useMathJax = () => {
   const MathJax = useMathJaxContext();
 
   function updateMathContent(onFinish = () => {}) {
-    if (!MathJax || typeof MathJax.typesetPromise !== "function") return;
+    if (!MathJax || typeof MathJax.typesetPromise !== 'function') return;
 
     MathJax &&
       MathJax.typesetPromise()

@@ -6,6 +6,8 @@
   "homepage": "http://asnunes.github.io/mathjax3-react",
   "scripts": {
     "start": "vite",
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx src",
+    "format": "prettier --write \"src/**/*.{ts,js,tsx,jsx}\"",
     "build": "tsc && vite build"
   },
   "keywords": [

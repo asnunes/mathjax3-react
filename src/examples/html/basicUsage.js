@@ -1,11 +1,11 @@
-import React from "react";
-import MathJax from "../../lib";
+import React from 'react';
+import MathJax from '../../lib';
 
 function basicUsage() {
   return (
     <div className="App">
       <MathJax.Provider>
-        <MathJax.Html html={html}/>
+        <MathJax.Html html={html} />
       </MathJax.Provider>
     </div>
   );

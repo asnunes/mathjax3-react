@@ -1,5 +1,5 @@
-import React from "react";
-import MathJax from "../../lib";
+import React from 'react';
+import MathJax from '../../lib';
 
 function BasicUsage() {
   return (

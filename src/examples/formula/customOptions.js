@@ -1,5 +1,5 @@
-import React from "react";
-import MathJax from "../../lib";
+import React from 'react';
+import MathJax from '../../lib';
 
 function customOptions() {
   return (
@@ -8,7 +8,7 @@ function customOptions() {
         url="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
         options={{
           tex: {
-            inlineMath: [["$", "$"]],
+            inlineMath: [['$', '$']],
           },
         }}
       >

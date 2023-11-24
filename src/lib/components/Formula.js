@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useMathJax } from "../hooks";
+import React, { useEffect } from 'react';
+import { useMathJax } from '../hooks';
 
 export default function Formula({ formula }) {
   const [MathJax, updateMathContent] = useMathJax();

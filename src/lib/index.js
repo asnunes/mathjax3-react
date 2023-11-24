@@ -5,6 +5,6 @@ const MathJax = {
   Provider,
   Formula,
   Html,
-}
+};
 
 export default MathJax;

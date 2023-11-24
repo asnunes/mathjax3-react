@@ -1,5 +1,5 @@
-import loadScript from "simple-load-script";
-import React, { createContext, useContext, useState, useEffect } from "react";
+import loadScript from 'simple-load-script';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const MathJaxContext = createContext(null);
 
@@ -25,17 +25,11 @@ const Provider = (props) => {
     console.log(err);
   }
 
-  return (
-    <MathJaxContext.Provider
-      value={isMathJaxLoaded ? MathJax : null}
-      {...props}
-    />
-  );
+  return <MathJaxContext.Provider value={isMathJaxLoaded ? MathJax : null} {...props} />;
 };
 
 const DEFAULT_OPTIONS = {};
-const DEFAULT_URL =
-  "https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js";
+const DEFAULT_URL = 'https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js';
 
 export const useMathJaxContext = () => useContext(MathJaxContext);
 
