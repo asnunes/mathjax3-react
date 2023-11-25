@@ -15,5 +15,5 @@ export default function MathJaxHtml({ html, onFinishRender }: MathJaxHtmlProps):
 
 type MathJaxHtmlProps = {
   html: string;
-  onFinishRender: () => void;
+  onFinishRender?: () => void;
 };
