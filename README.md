@@ -89,6 +89,42 @@ Result:
 
 ![basic formula example](./docs/images/formula-basic.png)
 
+## MathJaxProvider Component
+
+The `MathJaxProvider` component must be used as a parent for the `MathJaxHtml` and `MathJaxFormula` components. This is essential because `MathJaxProvider` is responsible for loading the MathJax script, which the `MathJaxHtml` or `MathJaxFormula` components will consume and utilize.
+
+**Rationale Behind This Design**
+
+Loading MathJax is a resource-intensive process. To optimize performance, `MathJaxProvider` should be placed high in your component hierarchy to load the MathJax script only once. This approach prevents the script from being reloaded unnecessarily and allows `MathJaxHtml` and `MathJaxFormula` components to operate within contexts that update more frequently, thereby leveraging the pre-loaded MathJax script efficiently.
+
+```tsx
+import React from 'react';
+import { MathJaxProvider, MathJaxFormula } from 'mathjax3-react';
+
+function MathInterleavedWithText() {
+  return (
+    <div>
+      <p>Consider the following integral as an example:</p>
+      <MathJaxFormula formula="\\int x^2dx" />
+      <p>Euler's identity is an astonishing formula in the field of mathematics:</p>
+      <MathJaxFormula formula="e^{i\\pi} + 1 = 0" />
+      {/* More content and formulas can be added here */}
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <MathJaxProvider>
+      <h1>Mathematical Concepts</h1>
+      <MathInterleavedWithText />
+    </MathJaxProvider>
+  );
+}
+
+export default App;
+```
+
 ### Custom options
 
 You can set custom script url or MathJax by sending them as props to `MathJax.Provider` component
@@ -150,11 +186,3 @@ function CustomInput() {
 
 export default CustomInput;
 ```
-
-## MathJaxProvider Component
-
-The `MathJaxProvider` component must be used as a parent for the `MathJaxHtml` and `MathJaxFormula` components. This is essential because `MathJaxProvider` is responsible for loading the MathJax script, which the `MathJaxHtml` or `MathJaxFormula` components will consume and utilize.
-
-**Rationale Behind This Design**
-
-Loading MathJax is a resource-intensive process. To optimize performance, `MathJaxProvider` should be placed high in your component hierarchy to load the MathJax script only once. This approach prevents the script from being reloaded unnecessarily and allows `MathJaxHtml` and `MathJaxFormula` components to operate within contexts that update more frequently, thereby leveraging the pre-loaded MathJax script efficiently.
