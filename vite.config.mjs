@@ -21,7 +21,7 @@ export default defineConfig({
       entry: 'src/index.ts',
       name: 'mathjax3-react',
       formats: ['es', 'umd'],
-      fileName: 'index',
+      fileName: 'mathjax3-react',
     },
     rollupOptions: {
       external: ['react', 'react/jsx-runtime'],

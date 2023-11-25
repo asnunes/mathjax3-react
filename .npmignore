@@ -29,10 +29,13 @@ yarn-debug.log*
 yarn-error.log*
 
 .eslintrc.json
+.eslintrc.js
 .github
 .prettierrc.js
 README.md
 tsconfig.json
 tsconfig.node.json
 vite-env.d.ts
-vite.config.js
+vite.config.mjs
+
+bundle-analysis.html
