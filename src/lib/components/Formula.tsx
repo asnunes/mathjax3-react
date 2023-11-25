@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { ReactElement, useEffect } from 'react';
 import { useMathJax } from '../hooks';
 
-export default function Formula({ formula }) {
+export default function Formula({ formula }): ReactElement {
   const [MathJax, updateMathContent] = useMathJax();
 
   useEffect(() => {
     updateMathContent();
   });
 
-  if (!MathJax) return null;
+  if (!MathJax) return <></>;
 
   return <div>{formula}</div>;
 }
