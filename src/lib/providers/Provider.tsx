@@ -6,7 +6,7 @@ export type MathJaxContextType = MathJaxOptions;
 
 export const MathJaxContext = createContext<MathJaxContextType>({});
 
-const Provider = (props: MathJaxProviderProps) => {
+export const MathJaxProvider = (props: MathJaxProviderProps) => {
   const url = props.url || DEFAULT_URL;
   const options = props.options || DEFAULT_OPTIONS;
 
@@ -37,5 +37,3 @@ type MathJaxProviderProps = {
 
 const DEFAULT_OPTIONS: MathJaxOptions = {};
 const DEFAULT_URL = 'https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js';
-
-export default Provider;

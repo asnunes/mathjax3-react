@@ -1,3 +1,3 @@
 export * from './protocols';
-export { Provider } from './providers';
+export { MathJaxProvider } from './providers';
 export { Formula, Html } from './components';

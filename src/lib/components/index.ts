@@ -1,4 +1,4 @@
-import Formula from './Formula';
-import Html from './Html';
+import MathJaxFormula from './Formula';
+import MathJaxHtml from './Html';
 
-export { Formula, Html };
+export { MathJaxFormula as Formula, MathJaxHtml as Html };
