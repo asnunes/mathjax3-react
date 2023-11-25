@@ -31,8 +31,8 @@ export const MathJaxProvider = (props: MathJaxProviderProps) => {
 };
 
 type MathJaxProviderProps = {
-  url: string;
-  options: MathJaxOptions;
+  url?: string;
+  options?: MathJaxOptions;
 };
 
 const DEFAULT_OPTIONS: MathJaxOptions = {};
