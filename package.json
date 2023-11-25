@@ -1,18 +1,16 @@
 {
   "name": "mathjax3-react",
-  "version": "1.1.0",
-  "private": false,
-  "main": "dist/index.js",
+  "version": "1.2.0",
+  "main": "./dist/mathjax3-react.umd.js",
+  "module": "./dist/mathjax3-react.mjs",
+  "types": "./dist/mathjax3-react.d.ts",
   "homepage": "http://asnunes.github.io/mathjax3-react",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "publish:npm": "rm -rf dist && mkdir dist && babel src/lib -d dist --copy-files",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "prepare": "npm run publish:npm"
+    "start": "vite",
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx src",
+    "format": "prettier --write \"src/**/*.{ts,js,tsx,jsx}\"",
+    "prebuild": "rm -rf dist",
+    "build": "tsc && vite build"
   },
   "keywords": [
     "mathjax",
@@ -35,45 +33,37 @@
     "url": "https://github.com/asnunes/mathjax3-react"
   },
   "peerDependencies": {
-    "react": "^17.0.2 || ^18.2.0",
-    "react-dom": "^17.0.2 || ^18.2.0"
+    "react": "18.x"
   },
   "dependencies": {
-    "simple-load-script": "^1.0.3"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "simple-load-script": "2.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.5",
-    "@babel/preset-react": "^7.14.5",
-    "gh-pages": "^3.2.3",
-    "react-scripts": "^4.0.3",
-    "install-peers": "^1.0.3"
+    "@types/mathjax": "^0.0.40",
+    "@types/react": "^18.2.38",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "prettier": "^3.1.0",
+    "react": "^18.2.0",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.2",
+    "vite-plugin-dts": "^3.6.3",
+    "vite-tsconfig-paths": "^4.2.1"
   },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ],
-      "@babel/preset-react"
-    ]
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/mathjax3-react.umd.js",
+      "require": "./dist/mathjax3-react.mjs",
+      "types": "./dist/mathjax3-react.d.ts"
+    }
   }
 }

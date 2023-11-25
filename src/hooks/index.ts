@@ -1,0 +1,1 @@
+export { useMathJax } from './useMathJax';
