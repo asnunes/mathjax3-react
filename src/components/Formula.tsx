@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from 'react';
+import { ReactElement, useEffect } from 'react';
 import { useMathJax } from '../hooks';
 
 export default function MathJaxFormula({ formula }: MathJaxFormulaProps): ReactElement {

@@ -1,5 +1,5 @@
 import loadScript from 'simple-load-script';
-import React, { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect } from 'react';
 import { MathJaxOptions } from '../protocols';
 
 export type MathJaxContextType = MathJaxOptions;
