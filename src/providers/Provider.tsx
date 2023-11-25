@@ -33,6 +33,7 @@ export const MathJaxProvider = (props: MathJaxProviderProps) => {
 type MathJaxProviderProps = {
   url?: string;
   options?: MathJaxOptions;
+  children: React.ReactNode;
 };
 
 const DEFAULT_OPTIONS: MathJaxOptions = {};
