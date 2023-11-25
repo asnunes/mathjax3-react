@@ -1,4 +1,4 @@
-# MathJax3 - React 
+# MathJax3 - React
 
 React component to easily load MathJax **v3** and process **dynamically** raw ASCIIMath, TeX or MathML content.
 
@@ -8,34 +8,34 @@ React component to easily load MathJax **v3** and process **dynamically** raw AS
 
 NPM:
 
-``npm install mathjax3-react --save``
+`npm install mathjax3-react --save`
 
 YARN:
 
-``yarn add mathjax3-react``
+`yarn add mathjax3-react`
 
 ## Basic usage
 
 #### From HTML String
 
-````javascript
-import React from "react";
-import MathJax from "mathjax3-react";
+```javascript
+import React from 'react';
+import MathJax from 'mathjax3-react';
 
 function App() {
   return (
-    <div className="App">
-      <MathJax.Provider>
-        <MathJax.Html html={html}/>
-      </MathJax.Provider>
+    <div>
+      <MathJaxProvider>
+        <MathJaxHtml html={html} />
+      </MathJaxProvider>
     </div>
   );
 }
-````
+```
 
 HTML string:
 
-````javascript
+```javascript
 const html = `
 <p>Let's analise this equation:</p>
 <p style="text-align:center;">
@@ -62,7 +62,7 @@ const html = `
   </math>
 </p>
 `;
-````
+```
 
 Result:
 
@@ -70,9 +70,9 @@ Result:
 
 ### TeX or AsciiMath formula
 
-````javascript
-import React from "react";
-import MathJax from "mathjax3-react";
+```javascript
+import React from 'react';
+import MathJax from 'mathjax3-react';
 
 function basicUsage() {
   return (
@@ -85,8 +85,7 @@ function basicUsage() {
 }
 
 export default basicUsage;
-
-````
+```
 
 Result:
 
@@ -94,11 +93,11 @@ Result:
 
 ### Custom options
 
-You can set custom script url or MathJax by sending them as props to ``MathJax.Provider`` component
+You can set custom script url or MathJax by sending them as props to `MathJax.Provider` component
 
-````javascript
-import React from "react";
-import MathJax from "mathjax3-react";
+```javascript
+import React from 'react';
+import MathJax from 'mathjax3-react';
 
 function customOptions() {
   return (
@@ -107,19 +106,21 @@ function customOptions() {
         url="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
         options={{
           tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']]
-          }
+            inlineMath: [
+              ['$', '$'],
+              ['\\(', '\\)'],
+            ],
+          },
         }}
       >
-        <MathJax.Formula formula="Euler's identity: $e^{i\pi} = -1$"/>
+        <MathJax.Formula formula="Euler's identity: $e^{i\pi} = -1$" />
       </MathJax.Provider>
     </div>
   );
 }
 
 export default customOptions;
-
-````
+```
 
 Result:
 
@@ -130,37 +131,34 @@ Result:
 Options props are exactly the same options used in MathJax lib. So you can use [official MathJax documentation](https://docs.mathjax.org/en/latest/web/configuration.html) to set custom options.
 
 ### Custom Input
-````javascript
-import React, { useState } from "react";
-import MathJax from "mathjax3-react";
+
+```javascript
+import React, { useState } from 'react';
+import MathJax from 'mathjax3-react';
 
 function CustomInput() {
-  const [value, setValue] = useState("\\int_{-\\infty}^{+\\infty} e^{-x^2} dx = \\sqrt{\\pi}");
+  const [value, setValue] = useState('\\int_{-\\infty}^{+\\infty} e^{-x^2} dx = \\sqrt{\\pi}');
 
   return (
     <div className="App">
       <h1>Custom Math Input</h1>
-      <input type="text" value={value} onChange={(e) => setValue(e.target.value)} style={{width: '100%'}}/>
+      <input type="text" value={value} onChange={(e) => setValue(e.target.value)} style={{ width: '100%' }} />
       <MathJax.Provider>
-        <MathJax.Formula formula={"$$" + value + "$$"} />
+        <MathJax.Formula formula={'$$' + value + '$$'} />
       </MathJax.Provider>
     </div>
   );
 }
 
 export default CustomInput;
-
-````
+```
 
 Result is available on [**live example**](https://asnunes.github.io/mathjax3-react/).
 
-
-
 ## MathJax.Provider
 
-``MathJax.Provider`` needs to be parent of ``MathJax.Html`` or ``MathJax.Formula`` components. That's because ``MathJax.Provider`` is responsible to load MathJax script which will be consumed and updated by ``MathJax.Html`` or ``MathJax.Formula``.
+`MathJax.Provider` needs to be parent of `MathJax.Html` or `MathJax.Formula` components. That's because `MathJax.Provider` is responsible to load MathJax script which will be consumed and updated by `MathJax.Html` or `MathJax.Formula`.
 
 **Why did you do it?**
 
-It's because load MathJax can be heavy. So, you can can place ``MathJax.Provider`` in a higher context and then place ``MathJax.Html`` and ``MathJax.Formula`` in a context that will be updated more often.
-
+It's because load MathJax can be heavy. So, you can can place `MathJax.Provider` in a higher context and then place `MathJax.Html` and `MathJax.Formula` in a context that will be updated more often.

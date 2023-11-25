@@ -1,7 +1,7 @@
 import React, { ReactElement, useEffect } from 'react';
 import { useMathJax } from '../hooks';
 
-export default function MathJaxHtml({ html, onFinishRender }): ReactElement {
+export default function MathJaxHtml({ html, onFinishRender }: MathJaxHtmlProps): ReactElement {
   const [MathJax, updateMathContent] = useMathJax();
 
   useEffect(() => {
@@ -12,3 +12,8 @@ export default function MathJaxHtml({ html, onFinishRender }): ReactElement {
 
   return <div dangerouslySetInnerHTML={{ __html: html }}></div>;
 }
+
+type MathJaxHtmlProps = {
+  html: string;
+  onFinishRender: () => void;
+};

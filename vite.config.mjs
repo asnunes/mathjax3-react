@@ -6,16 +6,15 @@ export default defineConfig({
   plugins: [react(), dts()],
   build: {
     lib: {
-      entry: 'src/lib/index.ts',
+      entry: 'src/index.ts',
       name: 'mathjax3-react',
-      fileName: (format) => `index.${format}.js`,
+      fileName: () => `index.js`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react'],
       output: {
         globals: {
           react: 'React',
-          reactDOM: 'ReactDOM',
         },
       },
     },
