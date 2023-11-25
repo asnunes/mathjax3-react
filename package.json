@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "main": "./dist/mathjax3-react.umd.js",
   "module": "./dist/mathjax3-react.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/mathjax3-react.d.ts",
   "homepage": "http://asnunes.github.io/mathjax3-react",
   "scripts": {
     "start": "vite",
@@ -58,5 +58,12 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/mathjax3-react.umd.js",
+      "require": "./dist/mathjax3-react.mjs",
+      "types": "./dist/mathjax3-react.d.ts"
+    }
+  }
 }

@@ -13,7 +13,6 @@ export default defineConfig({
     lib: {
       entry: 'src/index.ts',
       name: 'mathjax3-react',
-      formats: ['es', 'umd'],
       fileName: 'mathjax3-react',
     },
     rollupOptions: {
