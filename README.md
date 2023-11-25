@@ -2,8 +2,6 @@
 
 React component to easily load MathJax **v3** and process **dynamically** raw ASCIIMath, TeX or MathML content.
 
-[**LIVE EXAMPLE**](https://asnunes.github.io/mathjax3-react/)
-
 ## Installation
 
 NPM:
@@ -152,8 +150,6 @@ function CustomInput() {
 
 export default CustomInput;
 ```
-
-Result is available on [**live example**](https://asnunes.github.io/mathjax3-react/).
 
 ## MathJaxProvider Component
 
